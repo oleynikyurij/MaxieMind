@@ -252,7 +252,8 @@ section,
 }
 
 .header {
-    display: flex;
+		display: flex;
+		margin-bottom: 37px;
     &__img {
         margin-right: 35px;
     }
@@ -270,5 +271,11 @@ section,
 
 .logo {
 
-	margin-left: 285px;
+	margin: 0 0 90px 285px;
+}
+.text {
+	width: 562px;
+	text-align: justify;
+	margin-left: auto;
+	line-height: 35 px;
 }
