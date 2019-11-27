@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "Oswald - Demi Bold";
+    src: url('../font/Oswald/oswald-demibold.woff2') format('woff2'),
+        url('../font/Oswald/oswald-demibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Oswald - Heavy";
+    src: url('../font/Oswald/oswald-heavy.woff2') format('woff2'),
+        url('../font/Oswald/oswald-heavy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Oswald - Extra Light";
+    src: url('../font/Oswald/oswald-lightitalic.woff2') format('woff2'),
+        url('../font/Oswald/oswald-lightitalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('../font/Myriad/MyriadPro-Regular.eot');
+    src: url('../Myriad/font/MyriadPro-Regular.eot?#iefix')
+            format('embedded-opentype'),
+        url('../font/Myriad/MyriadPro-Regular.woff') format('woff'),
+        url('../font/Myriad/MyriadPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

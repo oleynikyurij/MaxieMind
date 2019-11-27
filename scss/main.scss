@@ -1,0 +1,274 @@
+@import 'utils/font';
+@import 'utils/vars';
+@import 'utils/reset';
+
+html {
+    line-height: $mainLineHeight;
+    font-size: $mainFontSize;
+    color: $mainFontColor;
+    height: 100%;
+
+    @media screen and (max-width: $desktopWidth) {
+        font-size: 16px;
+    }
+    @media screen and (max-width: $tableWidth) {
+        font-size: 15px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+        font-size: 14px;
+    }
+}
+
+body {
+    height: 100%;
+    font-family: $mainFont;
+    font-size: $mainFontSize;
+    font-weight: $mainFontWeight;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+}
+
+section,
+.section {
+    position: relative;
+    padding: 40px 0;
+    @media screen and (max-width: $desktopWidth) {
+        padding: 36px 0;
+    }
+    @media screen and (max-width: $desktopWidth) {
+        padding: 28px 0;
+    }
+    @media screen and (max-width: $desktopWidth) {
+        padding: 20px 0;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.container {
+    flex: 0 0 auto;
+    position: relative;
+    max-width: $desktopWidth;
+    margin: 0 auto;
+    @media screen and (max-width: $smDesktopWidth) {
+        max-width: $tableWidth;
+    }
+    @media screen and (max-width: $tableWidth) {
+        max-width: $phoneWidth;
+    }
+    @media screen and (max-width: $phoneWidth) {
+        max-width: $smPhoneWidth;
+    }
+}
+
+.content {
+    display: flex;
+    width: 1173px;
+    height: 1195px;
+    background-color: #7d7c7c;
+}
+
+//Post1
+.left-side {
+    position: relative;
+    width: 265px;
+    background-color: #1b435f;
+}
+
+.right-side {
+    padding: 80px 60px;
+}
+
+//hexagons
+
+.hex__small {
+    position: absolute;
+    left: 2px;
+    top: 0;
+    //last hex
+    &.hex__small--bottom {
+        top: 860px;
+        left: 2px;
+        .hexagon {
+            background-image: url(../img/trio1.jpg);
+        }
+    }
+    .hexagon {
+        position: relative;
+        width: 290px;
+        height: 167.43px;
+        margin: 83.72px 0;
+        background-image: url(../img/trio.jpg);
+        background-size: auto 297.9127px;
+        background-position: center;
+        border-left: solid 16px #ffffff;
+        border-right: solid 16px #ffffff;
+    }
+
+    .hexTop,
+    .hexBottom {
+        position: absolute;
+        z-index: 1;
+        width: 205.06px;
+        height: 205.06px;
+        overflow: hidden;
+        -webkit-transform: scaleY(0.5774) rotate(-45deg);
+        -ms-transform: scaleY(0.5774) rotate(-45deg);
+        transform: scaleY(0.5774) rotate(-45deg);
+        background: inherit;
+        left: 26.47px;
+    }
+
+    /*counter transform the bg image on the caps*/
+    .hexTop:after,
+    .hexBottom:after {
+        content: '';
+        position: absolute;
+        width: 258px;
+        height: 148.95636945092343px;
+        -webkit-transform: rotate(45deg) scaleY(1.7321) translateY(-74.4782px);
+        -ms-transform: rotate(45deg) scaleY(1.7321) translateY(-74.4782px);
+        transform: rotate(45deg) scaleY(1.7321) translateY(-74.4782px);
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
+        background: inherit;
+    }
+
+    .hexTop {
+        top: -102.5305px;
+        border-top: solid 22.6274px #ffffff;
+        border-right: solid 22.6274px #ffffff;
+    }
+
+    .hexTop:after {
+        background-position: center top;
+    }
+
+    .hexBottom {
+        bottom: -102.5305px;
+        border-bottom: solid 22.6274px #ffffff;
+        border-left: solid 22.6274px #ffffff;
+    }
+
+    .hexBottom:after {
+        background-position: center bottom;
+    }
+
+    .hexagon:after {
+        content: '';
+        position: absolute;
+        top: 9.2376px;
+        left: 0;
+        width: 258px;
+        height: 148.9564px;
+        z-index: 2;
+        background: inherit;
+    }
+}
+.hex__big {
+    position: absolute;
+    top: 300px;
+    left: 2px;
+    .hexagon {
+        position: relative;
+        width: 520px;
+        height: 300.22px;
+        margin: 150.11px 0;
+        background-image: url(../img/women.jpg);
+        background-size: auto 554.2563px;
+        background-position: center;
+        border-left: solid 20px #ffffff;
+        border-right: solid 20px #ffffff;
+    }
+
+    .hexTop,
+    .hexBottom {
+        position: absolute;
+        z-index: 1;
+        width: 367.7px;
+        height: 367.7px;
+        overflow: hidden;
+        -webkit-transform: scaleY(0.5774) rotate(-45deg);
+        -ms-transform: scaleY(0.5774) rotate(-45deg);
+        transform: scaleY(0.5774) rotate(-45deg);
+        background: inherit;
+        left: 56.15px;
+    }
+
+    /*counter transform the bg image on the caps*/
+    .hexTop:after,
+    .hexBottom:after {
+        content: '';
+        position: absolute;
+        width: 480px;
+        height: 277.1281292110204px;
+        -webkit-transform: rotate(45deg) scaleY(1.7321) translateY(-138.5641px);
+        -ms-transform: rotate(45deg) scaleY(1.7321) translateY(-138.5641px);
+        transform: rotate(45deg) scaleY(1.7321) translateY(-138.5641px);
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
+        background: inherit;
+    }
+
+    .hexTop {
+        top: -183.8478px;
+        border-top: solid 28.2843px #ffffff;
+        border-right: solid 28.2843px #ffffff;
+    }
+
+    .hexTop:after {
+        background-position: center top;
+    }
+
+    .hexBottom {
+        bottom: -183.8478px;
+        border-bottom: solid 28.2843px #ffffff;
+        border-left: solid 28.2843px #ffffff;
+    }
+
+    .hexBottom:after {
+        background-position: center bottom;
+    }
+
+    .hexagon:after {
+        content: '';
+        position: absolute;
+        top: 11.547px;
+        left: 0;
+        width: 480px;
+        height: 277.1281px;
+        z-index: 2;
+        background: inherit;
+    }
+}
+
+.header {
+    display: flex;
+    &__img {
+        margin-right: 35px;
+    }
+    &__title {
+        color: #fbfdfe;
+        font-family: 'Oswald - Heavy';
+        font-size: 87px;
+        text-transform: uppercase;
+        span {
+            font-family: 'Oswald - Extra Light';
+            font-weight: 200;
+        }
+    }
+}
+
+.logo {
+
+	margin-left: 285px;
+}
