@@ -30,20 +30,20 @@ body {
     padding: 0;
 }
 
-section,
-.section {
-    position: relative;
-    padding: 40px 0;
-    @media screen and (max-width: $desktopWidth) {
-        padding: 36px 0;
-    }
-    @media screen and (max-width: $desktopWidth) {
-        padding: 28px 0;
-    }
-    @media screen and (max-width: $desktopWidth) {
-        padding: 20px 0;
-    }
-}
+// section,
+// .section {
+//     position: relative;
+//     padding: 40px 0;
+//     @media screen and (max-width: $desktopWidth) {
+//         padding: 36px 0;
+//     }
+//     @media screen and (max-width: $desktopWidth) {
+//         padding: 28px 0;
+//     }
+//     @media screen and (max-width: $desktopWidth) {
+//         padding: 20px 0;
+//     }
+// }
 
 .wrapper {
     display: flex;
@@ -75,6 +75,7 @@ section,
     height: 1195px;
     background-color: #7d7c7c;
     flex: 1 0 auto;
+    margin-top: 20px;
 }
 .left-side {
     position: relative;
@@ -296,6 +297,12 @@ section,
     &:last-child {
         margin-right: 0;
     }
+    img {
+        transition: all 0.6s ease-in;
+    }
+    &:hover img {
+        transform: rotateY(360deg);
+    }
 }
 .footer__link {
     display: inline-block;
@@ -306,6 +313,25 @@ section,
     font-weight: 400;
     line-height: 18.55px;
     text-transform: uppercase;
+    position: relative;
+    transition: all 0.6s ease-in;
+    &:before {
+        content: '';
+        width: 0;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        background: #ffffff;
+        transition: all 0.3s;
+    }
+    &:hover {
+        &:before {
+            width: 100%;
+            left: 0;
+            background: #ffffff;
+        }
+    }
 }
 
 .content {
@@ -313,9 +339,9 @@ section,
     &::before {
         content: '';
         display: block;
-				position: absolute;
-				left: -15px;
-				top: -4px;
+        position: absolute;
+        left: -15px;
+        top: -4px;
         // height: 228px;
         height: 100%;
         width: 3px;
@@ -323,28 +349,28 @@ section,
     }
     &__date {
         font-family: 'Oswald - Extra Light';
-				font-size: 44px;
-				line-height: 1;
+        font-size: 44px;
+        line-height: 1;
         text-transform: uppercase;
         margin-bottom: 24px;
 
         span {
             color: #fbfdfe;
             font-family: 'Oswald - Demi Bold';
-				}
-				&--last {
-					margin-bottom: 35px;
-				}
+        }
+        &--last {
+            margin-bottom: 35px;
+        }
     }
     &__contact {
         color: #fbfdfe;
         font-family: 'Oswald - Extra Light';
         font-size: 28px;
-				line-height: 1;
+        line-height: 1;
         text-transform: uppercase;
-				margin-bottom: 10px;
-			&--last {
-				margin-bottom: 0;
-			}
+        margin-bottom: 10px;
+        &--last {
+            margin-bottom: 0;
+        }
     }
 }
