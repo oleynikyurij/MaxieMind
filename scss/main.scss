@@ -87,7 +87,8 @@ body {
     display: flex;
     flex-direction: column;
     padding: 60px;
-    z-index: 1;
+		z-index: 1;
+		overflow: hidden;
 }
 
 //hexagons
@@ -333,6 +334,52 @@ body {
         }
     }
 }
+
+.info {
+	position: relative;
+	.hex-bg {
+		position: absolute;
+    top: -140px;
+    bottom: 0;
+    right: 0;
+    left: -80px;
+		// background-color: #616060;
+
+		.hexagon {
+			position: relative;
+			width: 475px;
+			height: 274.24px;
+			background-color: #616060;
+			opacity: 0.5;
+			margin: 137.12px 0;
+			transform: rotate(76deg);
+		}
+
+		.hexagon:before,
+		.hexagon:after {
+			content: "";
+			position: absolute;
+			width: 0;
+			border-left: 237.5px solid transparent;
+			border-right: 237.5px solid transparent;
+		}
+
+		.hexagon:before {
+			bottom: 100%;
+			border-bottom: 137.12px solid #616060;
+		}
+
+		.hexagon:after {
+			top: 100%;
+			width: 0;
+			border-top: 137.12px solid #616060;
+		}
+	}
+	.hex-bg + .hex-bg > .hexagon {
+		transform: rotate(106deg);
+	}
+}
+
 
 .content {
     position: relative;
