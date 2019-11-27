@@ -68,14 +68,14 @@ section,
     }
 }
 
-.content {
+//Post1
+.post1 {
     display: flex;
     width: 1173px;
     height: 1195px;
     background-color: #7d7c7c;
+    flex: 1 0 auto;
 }
-
-//Post1
 .left-side {
     position: relative;
     width: 265px;
@@ -83,7 +83,10 @@ section,
 }
 
 .right-side {
-    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    z-index: 1;
 }
 
 //hexagons
@@ -252,8 +255,8 @@ section,
 }
 
 .header {
-		display: flex;
-		margin-bottom: 37px;
+    display: flex;
+    margin-bottom: 37px;
     &__img {
         margin-right: 35px;
     }
@@ -269,13 +272,79 @@ section,
     }
 }
 
+.main {
+    flex: 1 0 auto;
+}
 .logo {
-
-	margin: 0 0 90px 285px;
+    margin: 0 0 90px 285px;
 }
 .text {
-	width: 562px;
-	text-align: justify;
-	margin-left: auto;
-	line-height: 35 px;
+    width: 562px;
+    text-align: justify;
+    margin-left: auto;
+    line-height: 35 px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.social__link {
+    margin-right: 15px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.footer__link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ffffff;
+    font-family: 'Oswald - Extra Light';
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 18.55px;
+    text-transform: uppercase;
+}
+
+.content {
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+				position: absolute;
+				left: -15px;
+				top: -4px;
+        // height: 228px;
+        height: 100%;
+        width: 3px;
+        background-color: #fff;
+    }
+    &__date {
+        font-family: 'Oswald - Extra Light';
+				font-size: 44px;
+				line-height: 1;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+
+        span {
+            color: #fbfdfe;
+            font-family: 'Oswald - Demi Bold';
+				}
+				&--last {
+					margin-bottom: 35px;
+				}
+    }
+    &__contact {
+        color: #fbfdfe;
+        font-family: 'Oswald - Extra Light';
+        font-size: 28px;
+				line-height: 1;
+        text-transform: uppercase;
+				margin-bottom: 10px;
+			&--last {
+				margin-bottom: 0;
+			}
+    }
 }
